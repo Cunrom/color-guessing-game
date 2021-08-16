@@ -1,0 +1,15 @@
+<div class="container">
+    <h1><a routerLink="/">RGB({{ chosenRGB.red }}, {{ chosenRGB.green }}, {{ chosenRGB.blue }})</a></h1>
+    <div class="colors">
+        <button *ngIf="showRGB1" [disabled]="!showRGB2"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb1.red + ', ' + this.rgb1.green + ', ' + this.rgb1.blue + ')'"
+            (click)="onRGB1()"></button>
+        <button *ngIf="showRGB2" [disabled]="!showRGB3"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb2.red + ', ' + this.rgb2.green + ', ' + this.rgb2.blue + ')'"
+            (click)="onRGB2()"></button>
+        <button *ngIf="showRGB3" [disabled]="!showRGB1"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb3.red + ', ' + this.rgb3.green + ', ' + this.rgb3.blue + ')'"
+            (click)="onRGB3()"></button>
+    </div>
+    <h2>Streak: {{ streak }}</h2>
+</div>

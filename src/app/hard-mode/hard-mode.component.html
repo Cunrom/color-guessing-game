@@ -1,0 +1,26 @@
+<div class="container">
+    <h1><a routerLink="/">RGB({{ chosenRGB.red }}, {{ chosenRGB.green }}, {{ chosenRGB.blue }})</a></h1>
+    <div class="colors">
+        <button *ngIf="showRGB1" [disabled]="!showRGB6"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb1.red + ', ' + this.rgb1.green + ', ' + this.rgb1.blue + ')'"
+            (click)="onRGB1()"></button>
+        <button *ngIf="showRGB2" [disabled]="!showRGB5"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb2.red + ', ' + this.rgb2.green + ', ' + this.rgb2.blue + ')'"
+            (click)="onRGB2()"></button>
+        <button *ngIf="showRGB3" [disabled]="!showRGB4"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb3.red + ', ' + this.rgb3.green + ', ' + this.rgb3.blue + ')'"
+            (click)="onRGB3()"></button>
+    </div>
+    <div class="colors">
+        <button *ngIf="showRGB4" [disabled]="!showRGB3"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb4.red + ', ' + this.rgb4.green + ', ' + this.rgb4.blue + ')'"
+            (click)="onRGB4()"></button>
+        <button *ngIf="showRGB5" [disabled]="!showRGB2"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb5.red + ', ' + this.rgb5.green + ', ' + this.rgb5.blue + ')'"
+            (click)="onRGB5()"></button>
+        <button *ngIf="showRGB6" [disabled]="!showRGB1"
+            [style.backgroundColor]="'rgb' + '(' + this.rgb6.red + ', ' + this.rgb6.green + ', ' + this.rgb6.blue + ')'"
+            (click)="onRGB6()"></button>
+    </div>
+    <h2>Streak: {{ streak }}</h2>
+</div>
